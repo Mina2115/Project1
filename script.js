@@ -5,18 +5,32 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
-var marker1 = L.marker([38.56694, -90.49470]).addTo(mymap);
+var marker1 = L.marker([38.6359, -90.2342]).addTo(mymap);
 
-var marker2 = L.marker([38.62521, -90.19111]).addTo(mymap);
+var marker2 = L.marker([38.6488, -90.3108]).addTo(mymap);
 
-var marker3 = L.marker([38.60055, -90.24290]).addTo(mymap);
+var marker3 = L.marker([38.9404,  -92.3277]).addTo(mymap);
 
-var marker4 = L.marker([38.62017, -90.27325]).addTo(mymap);
+var marker4 = L.marker([38.7102, -90.3111]).addTo(mymap);
 
-var marker5 = L.marker([38.71714, -90.44806]).addTo(mymap);
+var marker5 = L.marker([39.0333, -94.5774]).addTo(mymap);
 
-marker1.bindPopup("<b>Resturant 1</b><br>Troy Mediterranean Cuisine").openPopup();
-marker2.bindPopup("<b>Resturant 2</b><br>Three Sixty").openPopup();
-marker3.bindPopup("<b>Resturant 3</b><br>The Vine Cafe").openPopup();
-marker4.bindPopup("<b>Resturant 4</b><br>Charlie Gitto's on the Hill").openPopup();
-marker5.bindPopup("<b>Resturant 5</b><br>India Palace").openPopup();
+var marker6 = L.marker([37.9537, -91.7756]).addTo(mymap);
+
+var marker7 = L.marker([38.5893, -90.3438]).addTo(mymap);
+
+var marker8 = L.marker([38.3350, -92. 1017]).addTo(mymap);
+
+var marker9 = L.marker([38.7931, -89.9961]).addTo(mymap);
+
+
+
+marker1.bindPopup("<b>Saint Louis University</b><br>One North Grand Blvd, Saint Louis, Missouri 63103-2097").openPopup();
+marker2.bindPopup("<b>Washington University in St. Louis</b><br>One Brookings Drive, Saint Louis, Missouri 63130-4899").openPopup();
+marker3.bindPopup("<b>University of Missouri- Columbia </b><br>105 Jesse Hall, Columbia, Missouri 65211-1050").openPopup();
+marker4.bindPopup("<b>University of Missouri–St. Louis</b><br>One University Boulevard, Saint Louis, Missouri 63121-4400").openPopup();
+marker5.bindPopup("<b>University of Missouri–Kansas </b><br>5100 Rockhill Rd., Kansas City, Missouri 64110").openPopup();
+marker6.bindPopup("<b>Webster university</b><br>470 E Lockwood Ave., Saint Louis, Missouri 63119-3194").openPopup();
+marker7.bindPopup("<b> Maryville University</b><br>650 Maryville University Drive, Saint Louis, Missouri 63141-7299").openPopup();
+marker8.bindPopup("<b>Lincoln University</b><br>820 Chestnut Street, Jefferson City, Missouri 65101").openPopup();
+marker9.bindPopup("<b>Southern Illinois University-Edwardsville</b><br>Il State Rte 157, Edwardsville, Illinois 62026-1259").openPopup();

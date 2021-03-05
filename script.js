@@ -19,7 +19,7 @@ var marker6 = L.marker([37.9537, -91.7756]).addTo(mymap);
 
 var marker7 = L.marker([38.5893, -90.3438]).addTo(mymap);
 
-var marker8 = L.marker([38.3354, -92. 1010]).addTo(mymap);
+var marker8 = L.marker([38.56507 -92.1694]).addTo(mymap);
 
 var marker9 = L.marker([38.7931, -89.9961]).addTo(mymap);
 

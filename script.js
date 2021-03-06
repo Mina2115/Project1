@@ -5,6 +5,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
+var geojsonFeature = {
 "type": "FeatureCollection",
   "features": [
     {
@@ -489,3 +490,5 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     }
   ]
 }
+
+var feat = L.geoJSON(geojsonFeature).addTo(map);

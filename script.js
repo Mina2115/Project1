@@ -5,7 +5,9 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
-var geojsonFeature_1 = {
+// Layer 1 is colleges with GIS programs in the Greater STL Area
+
+var geojsonFeature = {
 "type": "FeatureCollection",
   "features": [
     {
@@ -489,11 +491,17 @@ var geojsonFeature_1 = {
       }
     }
   ]
-}
+};
 
-const MissouriBoundary = L.esri.featureLayer({
-  url: 'https://www.portlandmaps.com/arcgis/rest/services/Public/Parks_Misc/MapServer/21/'
-}).addTo(map);
+var feat = L.geoJSON(geojsonFeature).addTo(mymap);
+
+feat.bindPopup(geojsonFeature.features[0].properties.name).openPopup();
 
 
-L.geoJSON(geojsonFeature).addTo(map);
+// Layer 2 is the boundaries of the state of Missouri
+// load GeoJSON from an external file
+ $.getJSON("https://opendata.arcgis.com/datasets/4a174bba74444ab8a7d761563d677237_0.geojson",function(data){
+L.geoJson(data).addTo(mymap);
+});
+
+

@@ -493,15 +493,21 @@ var geojsonFeature = {
   ]
 };
 
-var feat = L.geoJSON(geojsonFeature).addTo(mymap);
-
-feat.bindPopup(geojsonFeature.features[0].properties.name).openPopup();
-
+L.geoJson(geojsonFeature,{
+    pointToLayer: function(feature, latlng){
+   return L.marker(latlng);
+    },
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup('<h4>'+feature.properties.NAME+'</h4><h4>'+feature.properties.ADDRESS+'</h4>');
+    }
+  }).addTo(mymap);
 
 // Layer 2 is the boundaries of the state of Missouri
 // load GeoJSON from an external file
  $.getJSON("https://opendata.arcgis.com/datasets/4a174bba74444ab8a7d761563d677237_0.geojson",function(data){
 L.geoJson(data).addTo(mymap);
 });
+
+
 
 

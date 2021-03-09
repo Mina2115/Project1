@@ -502,11 +502,12 @@ L.geoJson(geojsonFeature,{
     }
   }).addTo(mymap);
 
-// Layer 2 is the boundaries of the state of Missouri
+// Layer 2 is the boundaries of Missouri 114 counties and the city of Saint Louis
 // load GeoJSON from an external file
  $.getJSON("https://opendata.arcgis.com/datasets/d7ed01294fc3492286a02fe470f56452_0.geojson",function(data){
 L.geoJson(data).addTo(mymap);
 });
+
 
 
 
